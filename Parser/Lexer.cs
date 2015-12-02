@@ -11,6 +11,18 @@ namespace jsmix.Parser
 		private static HashSet<string> _keywords;
 		private static HashSet<string> _strictModeReservedWords;
 		private static HashSet<string> _futureReservedWords;
+
+		private int _index; // position in the stream
+		private int _length; // length of the stream
+		private int _lineNumber;
+		private int _lineStart;
+		private CodeSegment _segment;
+		private Token _lookahead;
+		private string _source;
+
+		private State _state;
+		private bool _strict;
+
 		static Lexer()
 		{
 			_keywords = new HashSet<string>();
@@ -69,5 +81,7 @@ namespace jsmix.Parser
             _futureReservedWords.Add("import");
             _futureReservedWords.Add("super");
 		}
+
+
 	}
 }

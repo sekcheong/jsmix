@@ -41,12 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parser\CodeSegment.cs" />
+    <Compile Include="JavaScript\SyntaxTree\Expressions\Expression.cs" />
+    <Compile Include="Parser\Position.cs" />
+    <Compile Include="JavaScript\SyntaxTree\SyntaxNode.cs" />
+    <Compile Include="JavaScript\SyntaxTree\SyntaxNodeType.cs" />
+    <Compile Include="Parser\Lexer.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\Token.cs" />
+    <Compile Include="Parser\TokenType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
